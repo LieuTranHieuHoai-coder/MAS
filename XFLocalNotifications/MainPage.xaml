@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFLocalNotifications.MainPage"
+             xmlns:vm="clr-namespace:XFLocalNotifications.ViewModels"
+             >
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label x:Name="FactoryName" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Button Text="Back" Clicked="Button_Clicked" />
+        <Label x:Name="Alert" HorizontalTextAlignment="Center" TextColor="Green" FontSize="24"/>
+        <StackLayout BackgroundColor="#232020">
+            <ListView Grid.Row="1" x:Name="MachineList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid x:Name="Item">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="" TextColor="Red"></Label>
+                                    <Label Grid.Column="0" Text="{Binding NameFactory}" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Text="{Binding NameLine}" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                    <Button Grid.Column="2" 
+                                        FontFamily="MaterialIconsRegular" 
+                                        x:Name="detail"
+                                        HorizontalOptions="Center" 
+                                        BackgroundColor="Cyan" 
+                                        TextColor="White" 
+                                        FontSize="20" 
+                                        Text="&#xe88e;" 
+                                        Margin="3"
+                                        
+                                        >
+                                    </Button>
+                                    <Button Grid.Column="3" 
+                                        FontFamily="MaterialIconsRegular" 
+                                        HorizontalOptions="Center" 
+                                        BackgroundColor="LightGray" 
+                                        TextColor="Black" 
+                                        Text="&#xf206;"
+                                        x:Name="ScanButton" 
+                                        Clicked="ScanButton_Clicked"
+                                        Margin="3"></Button>
+
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Frame BackgroundColor="#ffffff" HeightRequest="80" CornerRadius="12" Margin="5">
+                <Grid x:Name="Item">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="" TextColor="Red"></Label>
+                    <Label Grid.Column="0" Text="NameFactory" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                    <Label Grid.Column="1" Text="NameLine" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                    <StackLayout Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Frame CornerRadius="10" BorderColor="Cyan" Padding="10" >
+                            <Label      FontFamily="MaterialIconsRegular" 
+                                        x:Name="detail"
+                                        HorizontalOptions="Center" 
+                                        TextColor="Cyan" 
+                                        FontSize="40" 
+                                        Text="&#xe88e;">
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Frame CornerRadius="10" BorderColor="Black" Padding="10">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ScanButton_Clicked"/>
+                            </Frame.GestureRecognizers>
+                            <Label      FontFamily="MaterialIconsRegular" 
+                                        x:Name="ScanButton"
+                                        HorizontalOptions="Center" 
+                                        TextColor="Black" 
+                                        FontSize="40" 
+                                        Text="&#xf206;">
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+                    <!--<Button Grid.Column="2" 
+                                        FontFamily="MaterialIconsRegular" 
+                                        x:Name="detail"
+                                        HorizontalOptions="Center" 
+                                        BackgroundColor="Cyan" 
+                                        TextColor="White" 
+                                        FontSize="20" 
+                                        Text="&#xe88e;" 
+                                        Margin="3"
+                                        
+                                        >
+                    </Button>-->
+                    <!--<Button Grid.Column="3" 
+                                        FontFamily="MaterialIconsRegular" 
+                                        HorizontalOptions="Center" 
+                                        BackgroundColor="LightGray" 
+                                        TextColor="Black" 
+                                        Text="&#xf206;"
+                                        x:Name="ScanButton" 
+                                        Clicked="ScanButton_Clicked"
+                                        Margin="3"></Button>-->
+
+                </Grid>
+            </Frame>
+            
+        </StackLayout>
+        
+
+      
+            
+       
+
+    </StackLayout>
+
+</ContentPage>

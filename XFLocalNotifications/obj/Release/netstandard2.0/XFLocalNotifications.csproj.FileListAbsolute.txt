@@ -1,0 +1,11 @@
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\XFLocalNotifications.csproj.AssemblyReference.cache
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\XFLocalNotifications.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\App.xaml.g.cs
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\LoginPage.xaml.g.cs
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\XFLocalNotifications.AssemblyInfoInputs.cache
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\XFLocalNotifications.AssemblyInfo.cs
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\XFLocalNotifications.csproj.CoreCompileInputs.cache
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\XFLocalNotifications.dll
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\ref\XFLocalNotifications.dll
+D:\Code\XFLocalNotifications\XFLocalNotifications\obj\Release\netstandard2.0\XFLocalNotifications.pdb

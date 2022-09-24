@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "2OvXfviubVk23MgF3f9ht/HT2DXfRwbpH8Lug47K36lE4cdsWDORbl2wMxnx4pkj2EzoM2s6nbs/PsgoJEV2ew==",
+  "success": true,
+  "projectFilePath": "D:\\Code\\MAS_System\\XFLocalNotifications\\XFLocalNotifications.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\hieuhoai\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}
