@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2OvXfviubVk23MgF3f9ht/HT2DXfRwbpH8Lug47K36lE4cdsWDORbl2wMxnx4pkj2EzoM2s6nbs/PsgoJEV2ew==",
+  "dgSpecHash": "eBWWZ7bC+BF8U8U7aVl4r0B8uWtLMB5n3fs2L/Dj5eeljLA4+9li0SjxOyMEUGh38oee7J0sFGkvUT1kIpruug==",
   "success": true,
-  "projectFilePath": "D:\\Code\\MAS_System\\XFLocalNotifications\\XFLocalNotifications.csproj",
+  "projectFilePath": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieuhoai\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\hieuhoai\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
