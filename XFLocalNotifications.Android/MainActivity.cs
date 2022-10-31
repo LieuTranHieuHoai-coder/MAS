@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Xamarin.Forms;
+using Plugin.LocalNotification;
 using XFLocalNotifications.Droid.Services;
 using XFLocalNotifications.Messages;
 
@@ -21,7 +22,7 @@ namespace XFLocalNotifications.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
+            LocalNotificationCenter.CreateNotificationChannel();
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 

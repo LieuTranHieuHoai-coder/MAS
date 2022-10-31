@@ -11,5 +11,7 @@ namespace XFLocalNotifications.Global
 
         public static string apiURL = "http://mas.qve.com/sewinglineqvl/qrconnect.php?ID_Keys=";
         //public static string apiURL = "http://192.168.1.141/sewinglineqvl/qrconnect.php?ID_Keys=";
+
+        public static int? countItems { get; set; }
     }
 }

@@ -61,6 +61,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.LocalNotification">
+      <Version>10.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Preference">
       <Version>1.1.1.10</Version>
     </PackageReference>

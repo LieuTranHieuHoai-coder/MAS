@@ -25,25 +25,29 @@ namespace XFLocalNotifications.Droid.Helpers
                 .SetContentTitle("Thông Báo")
                 .SetContentText("Một máy may đang gặp vấn đề")
                 .SetSmallIcon(Resource.Drawable.location)
+                
                 .SetOngoing(true)
-                .SetContentIntent(pendingIntent);
+                .SetContentIntent(pendingIntent)
+                .SetAutoCancel(true);
 
-            if (global::Android.OS.Build.VERSION.SdkInt >= BuildVersionCodes.O)
-            {
-                NotificationChannel notificationChannel = new NotificationChannel(foregroundChannelId, "Title", NotificationImportance.Low);
-                notificationChannel.Importance = NotificationImportance.High;
-                notificationChannel.EnableLights(true);
-                notificationChannel.EnableVibration(true);
-                notificationChannel.SetShowBadge(true);
-                notificationChannel.SetVibrationPattern(new long[] { 100, 200, 300 });
+            //if (global::Android.OS.Build.VERSION.SdkInt >= BuildVersionCodes.O)
+            //{
+            //    NotificationChannel notificationChannel = new NotificationChannel(foregroundChannelId, "Title", NotificationImportance.Low);
+            //    notificationChannel.Importance = NotificationImportance.High;
+            //    notificationChannel.EnableLights(true);
+            //    notificationChannel.EnableVibration(true);
+            //    notificationChannel.SetShowBadge(true);
+               
+            //    notificationChannel.SetVibrationPattern(new long[] { 100, 200, 300 });
 
-                var notifManager = context.GetSystemService(Context.NotificationService) as NotificationManager;
-                if (notifManager != null)
-                {
-                    notifBuilder.SetChannelId(foregroundChannelId);
-                    notifManager.CreateNotificationChannel(notificationChannel);
-                }
-            }
+            //    var notifManager = context.GetSystemService(Context.NotificationService) as NotificationManager;
+            //    if (notifManager != null)
+            //    {
+            //        notifBuilder.SetChannelId(foregroundChannelId);
+            
+            //        notifManager.CreateNotificationChannel(notificationChannel);
+            //    }
+            //}
 
             return notifBuilder.Build();
         }

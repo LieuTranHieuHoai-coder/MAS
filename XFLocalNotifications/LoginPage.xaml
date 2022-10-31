@@ -112,7 +112,6 @@
                                 </LinearGradientBrush>
                             </Button.Background>
                         </Button>
-
                     </StackLayout>
                     
                 </StackLayout>

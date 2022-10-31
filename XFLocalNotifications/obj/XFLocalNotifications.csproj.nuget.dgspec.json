@@ -56,6 +56,14 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "Xam.Plugin.SimpleAudioPlayer": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.3, )"

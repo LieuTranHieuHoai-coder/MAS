@@ -15,110 +15,81 @@
         <Label x:Name="Alert" HorizontalTextAlignment="Center" TextColor="Green" FontSize="24"/>
         <Label Text="" x:Name="test"></Label>
         <StackLayout BackgroundColor="#232020">
-            <ListView x:Name="MachineList" HasUnevenRows="True">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
-                                <!--<Grid x:Name="Item">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*"/>
-                                        <ColumnDefinition Width="3*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Text="" TextColor="Red"></Label>
-                                    <Label Grid.Column="0" Text="{Binding NameFactory}" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                    <Label Grid.Column="1" Text="{Binding NameLine}" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                    <Button Grid.Column="2" 
-                                        FontFamily="MaterialIconsRegular" 
-                                        x:Name="detail"
-                                        HorizontalOptions="Center" 
-                                        BackgroundColor="Cyan" 
-                                        TextColor="White" 
-                                        FontSize="20" 
-                                        Text="&#xe88e;" 
-                                        Margin="3"
-                                        
-                                        >
-                                    </Button>
-                                    <Button Grid.Column="3" 
-                                        FontFamily="MaterialIconsRegular" 
-                                        HorizontalOptions="Center" 
-                                        BackgroundColor="LightGray" 
-                                        TextColor="Black" 
-                                        Text="&#xf206;"
-                                        x:Name="ScanButton" 
-                                        Clicked="ScanButton_Clicked"
-                                        Margin="3"></Button>
+            <RefreshView x:Name="refreshList" RefreshColor="Cyan" Refreshing="refreshList_Refreshing">
+                <ListView x:Name="MachineList" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
 
-                                </Grid>-->
-                                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="#262626">
-                                    <Frame BackgroundColor="#ffffff" VerticalOptions="Center"  CornerRadius="12" Margin="5">
-                                        <StackLayout VerticalOptions="FillAndExpand">
-                                            <StackLayout HeightRequest="100" VerticalOptions="CenterAndExpand">
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="150" BackgroundColor="#262626">
+                                        <Frame BackgroundColor="#ffffff" VerticalOptions="Center"  CornerRadius="12" Margin="5">
+                                            <StackLayout VerticalOptions="FillAndExpand">
+                                                <StackLayout HeightRequest="100" VerticalOptions="CenterAndExpand">
 
-                                                <Grid x:Name="Item">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="3*"/>
-                                                        <ColumnDefinition Width="3*"/>
-                                                        <ColumnDefinition Width="60"/>
-                                                        <ColumnDefinition Width="80"/>
-                                                    </Grid.ColumnDefinitions>
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition Height="*"/>
-                                                    </Grid.RowDefinitions>
+                                                    <Grid x:Name="Item">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="3*"/>
+                                                            <ColumnDefinition Width="3*"/>
+                                                            <ColumnDefinition Width="60"/>
+                                                            <ColumnDefinition Width="80"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*"/>
+                                                        </Grid.RowDefinitions>
 
-                                                    <Label Text="" TextColor="Red"></Label>
-                                                    <Label Grid.Column="0" Text="{Binding ButtonName}"  TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                                    <Label Grid.Column="1" Text="{Binding NameLine}" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                                    <StackLayout Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                                                        <Frame CornerRadius="10" BorderColor="Cyan" Padding="10" >
-                                                            <Frame.GestureRecognizers>
-                                                                <TapGestureRecognizer Tapped="StartButton_Clicked"/>
-                                                            </Frame.GestureRecognizers>
-                                                            <Label  FontFamily="MaterialIconsRegular" 
+                                                        <Label Text="" TextColor="Red"></Label>
+                                                        <Label Grid.Column="0" Text="{Binding ButtonName}"  TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                                        <Label Grid.Column="1" Text="{Binding NameLine}" TextColor="red" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                                        <StackLayout Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                                                            <Frame CornerRadius="10" BorderColor="Cyan" Padding="10" >
+                                                                <Frame.GestureRecognizers>
+                                                                    <TapGestureRecognizer Tapped="StartButton_Clicked"/>
+                                                                </Frame.GestureRecognizers>
+                                                                <Label  FontFamily="MaterialIconsRegular" 
                                                                     x:Name="detail"
                                                                     HorizontalOptions="Center" 
                                                                     TextColor="Green" 
                                                                     FontSize="40" 
                                                                     Text="&#xebe7;">
-                                                            </Label>
-                                                        </Frame>
-                                                    </StackLayout>
-                                                    <StackLayout Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                                                        <Frame CornerRadius="10" BorderColor="Black" Padding="10">
-                                                            <Frame.GestureRecognizers>
-                                                                <TapGestureRecognizer Tapped="ScanButton_Clicked"/>
-                                                            </Frame.GestureRecognizers>
+                                                                </Label>
+                                                            </Frame>
+                                                        </StackLayout>
+                                                        <StackLayout Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                                                            <Frame CornerRadius="10" BorderColor="Black" Padding="10">
+                                                                <Frame.GestureRecognizers>
+                                                                    <TapGestureRecognizer Tapped="ScanButton_Clicked"/>
+                                                                </Frame.GestureRecognizers>
 
-                                                            <Label  FontFamily="MaterialIconsRegular" 
+                                                                <Label  FontFamily="MaterialIconsRegular" 
                                                                     x:Name="ScanButton"
                                                                     HorizontalOptions="Center" 
                                                                     TextColor="Black" 
                                                                     FontSize="40" 
                                                                     Text="&#xf206;">
-                                                            </Label>
-                                                        </Frame>
-                                                    </StackLayout>
+                                                                </Label>
+                                                            </Frame>
+                                                        </StackLayout>
 
-                                                </Grid>
+                                                    </Grid>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal" VerticalOptions="End" HeightRequest="30">
+                                                    <Label Text="Thời gian bắt đầu: " TextColor="Black"></Label>
+                                                    <Label Text="{Binding BeginFixTime}" TextColor="Black"></Label>
+                                                </StackLayout>
                                             </StackLayout>
-                                            <StackLayout Orientation="Horizontal" VerticalOptions="End" HeightRequest="30">
-                                                <Label Text="Thời gian bắt đầu: " TextColor="Black"></Label>
-                                                <Label Text="{Binding BeginFixTime}" TextColor="Black"></Label>
-                                            </StackLayout>
-                                        </StackLayout>
 
-                                    </Frame>
-                                </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
 
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
-            </ListView>
+                </ListView>
+            </RefreshView>
+            
 
             <!--<Button Grid.Column="2" 
                                         FontFamily="MaterialIconsRegular" 
@@ -141,6 +112,45 @@
                                         x:Name="ScanButton" 
                                         Clicked="ScanButton_Clicked"
                                         Margin="3"></Button>-->
+
+            <!--<StackLayout VerticalOptions="Center">
+                <Button VerticalOptions="CenterAndExpand"
+                Text="Start Service"
+                Command="{Binding StartCommand}"
+                IsEnabled="{Binding StartEnabled}"/>
+
+                <Button VerticalOptions="CenterAndExpand"
+                Text="Stop Service"
+                Command="{Binding EndCommand}"
+                IsEnabled="{Binding StopEnabled}"/>
+
+                <Label Text="Coordinates" VerticalOptions="CenterAndExpand" FontSize="Title"/>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Latitude: "/>
+                                <Span Text="{Binding Latitude}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Longitude: "/>
+                                <Span Text="{Binding Longitude}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Text="{Binding UserMessage}" VerticalOptions="CenterAndExpand"/>
+
+            </StackLayout>-->
+
 
         </StackLayout>
     </StackLayout>

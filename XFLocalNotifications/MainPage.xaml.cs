@@ -4,6 +4,12 @@ using Xamarin.Forms;
 using ZXing.Net.Mobile.Forms;
 using XFLocalNotifications.Model;
 using XFLocalNotifications.ApiController;
+using System.Threading.Tasks;
+using XFLocalNotifications.ViewModels;
+using Plugin.SimpleAudioPlayer;
+using System.IO;
+using System.Reflection;
+using Plugin.LocalNotification;
 
 namespace XFLocalNotifications
 {
@@ -11,8 +17,11 @@ namespace XFLocalNotifications
     public partial class MainPage : ContentPage
     {
         public string getFac { get; set; }
+        public int count = 0;
+        public MainPageViewModel pushAlert = new MainPageViewModel();
         public MachineAPI machineAlertAPI = new MachineAPI();
         
+
         public MainPage()
         {
             InitializeComponent();
@@ -21,7 +30,11 @@ namespace XFLocalNotifications
             {
                 FactoryName.Text = Global.Global.factoryName;
             }
-
+            Device.StartTimer(new TimeSpan(0, 0, 5), () =>
+             {
+                 Device.BeginInvokeOnMainThread(() => ShowMachineAlert());
+                 return true;
+             });
         }
 
         public MainPage(string code)
@@ -29,34 +42,84 @@ namespace XFLocalNotifications
             InitializeComponent();
             ShowMachineAlert();
         }
-       
+        // show data
         public async void ShowMachineAlert()
         {
-            if (await machineAlertAPI.GetMachineAlertAsync()==null)
+            var list = await machineAlertAPI.GetMachineAlertAsync();
+            if (Global.Global.countItems == null)
             {
-                Alert.Text = "Hiện không có máy hư, nghỉ làm";
+                Global.Global.countItems = 0;
+                if (list == null)
+                {
+                    Global.Global.countItems = 0;
+                    Alert.Text = "Hiện không có máy hư, ngồi im xơi nước";
+                    MachineList.ItemsSource = list;
+                }
+                else
+                { 
+                    Alert.Text = list.Count.ToString() + " máy hỏng";
+                    MachineList.ItemsSource = list;
+
+                    Global.Global.countItems = list.Count;
+                    PushNotification(list.Count.ToString());
+                    //var stream = GetStreamFromFile("bell.mp3");
+                    //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    //audio.Load(stream);
+                    //audio.Play();
+                }
             }
             else
             {
-                //Alert.IsVisible = false;
-                var list = await machineAlertAPI.GetMachineAlertAsync();
-                MachineList.ItemsSource = list;
-                //for (int i = 0; i < list.Count; i++)
-                //{
-                //    if (list[i].BeginFixTime != null && list[i].BeginFixTime != "")
-                //    {
-                //        var a = list[i].ID_Button;
-                        
-                //    }
-                //}
+                if (list == null)
+                {
+                    Global.Global.countItems = 0;
+                    Alert.Text = "Hiện không có máy hư, ngồi im xơi nước";
+                    MachineList.ItemsSource = list;
+                }
+                else
+                {
+                    if (list.Count > Global.Global.countItems)
+                    {
+                        Alert.Text = list.Count.ToString() + " máy hỏng";
+                        MachineList.ItemsSource = list;
+
+                        Global.Global.countItems = list.Count;
+                        PushNotification(list.Count.ToString());
+                        //var stream = GetStreamFromFile("bell.mp3");
+                        //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                        //audio.Load(stream);
+                        //audio.Play();
+                    }
+                    else
+                    {
+                        Alert.Text = list.Count.ToString() + " máy hỏng";
+                        MachineList.ItemsSource = list;
+                        Global.Global.countItems = list.Count;
+                    }
+                    
+
+                }
             }
-           
         }
+        //push notification 
+        public void PushNotification(string message)
+        {
+            var notification = new NotificationRequest
+            {
+                BadgeNumber = 1,
+                Description = "Test description",
+                Title = "Notification",
+                NotificationId = 1337
+                
+            };
+            LocalNotificationCenter.Current.Show(notification);
+        }
+        //log out
         public async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushModalAsync(new LoginPage());
         }
-
+        //scan barcode
         private void ScanButton_Clicked(object sender, EventArgs e)
         {
            
@@ -71,19 +134,45 @@ namespace XFLocalNotifications
                });
             };
         }
-
+        // Begin fix time button
         private async void StartButton_Clicked(object sender, EventArgs e)
         {
             if (sender is Frame frame)
             {
+                
                 MachineList.SelectedItem = frame.BindingContext;
                 MachineAlert update = new MachineAlert();
                 update = (MachineAlert)MachineList.SelectedItem;
-                _ = await machineAlertAPI.UpdateMachineAlertAsync(update.ID_Button, update.ID_Line, update.ID_Factory);
-                ShowMachineAlert();
+                if (update.BeginFixTime == "" || update.BeginFixTime == null)
+                {
+                    _ = await machineAlertAPI.UpdateMachineAlertAsync(update.ID_Button, update.ID_Line, update.ID_Factory);
+                    ShowMachineAlert();
+                    
+                }
+                else
+                {
+                    await DisplayAlert("Thông báo", "Thời gian đã được đặt", "OK");
+                    ShowMachineAlert();
+                }
+                
             }
            
         }
+        // Auto Refresh data
+        private async void refreshList_Refreshing(object sender, EventArgs e)
+        {
+            await Task.Delay(1000);
+            ShowMachineAlert();
+            refreshList.IsRefreshing = false;
+        }
+        // Get FILE .mp3
+        private Stream GetStreamFromFile(string filename)
+        {
+            var assembly = typeof(App).GetTypeInfo().Assembly;
 
+            var stream = assembly.GetManifestResourceStream("XFLocalNotifications.Sounds." + filename);
+
+            return stream;
+        }
     }
 }
