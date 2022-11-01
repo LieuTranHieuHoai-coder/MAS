@@ -107,7 +107,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\my_icon.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFLocalNotifications\XFLocalNotifications.csproj">
       <Project>{22F5E0E8-FE23-4735-B6CF-DCAE3DD4DE26}</Project>

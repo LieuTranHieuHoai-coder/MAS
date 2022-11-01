@@ -41,7 +41,6 @@ D:\Code\MAS\XFLocalNotifications\bin\Debug\netstandard2.0\XFLocalNotifications.p
 D:\Code\MAS\XFLocalNotifications\bin\Debug\netstandard2.0\Mono.Android.dll
 D:\Code\MAS\XFLocalNotifications\bin\Debug\netstandard2.0\Mono.Android.pdb
 D:\Code\MAS\XFLocalNotifications\bin\Debug\netstandard2.0\Mono.Android.xml
-D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\XFLocalNotifications.csproj.AssemblyReference.cache
 D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\XFLocalNotifications.GeneratedMSBuildEditorConfig.editorconfig
 D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\LoginPage.xaml.g.cs

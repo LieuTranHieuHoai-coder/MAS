@@ -10,6 +10,7 @@ using Plugin.SimpleAudioPlayer;
 using System.IO;
 using System.Reflection;
 using Plugin.LocalNotification;
+using Android;
 
 namespace XFLocalNotifications
 {
@@ -61,7 +62,7 @@ namespace XFLocalNotifications
                     MachineList.ItemsSource = list;
 
                     Global.Global.countItems = list.Count;
-                    PushNotification(list.Count.ToString());
+                    PushNotification(list[list.Count - 1].NameLine + " " + list[list.Count - 1].ButtonName);
                     //var stream = GetStreamFromFile("bell.mp3");
                     //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
                     //audio.Load(stream);
@@ -84,7 +85,7 @@ namespace XFLocalNotifications
                         MachineList.ItemsSource = list;
 
                         Global.Global.countItems = list.Count;
-                        PushNotification(list.Count.ToString());
+                        PushNotification(list[list.Count - 1].NameLine + " " + list[list.Count - 1].ButtonName);
                         //var stream = GetStreamFromFile("bell.mp3");
                         //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
                         //audio.Load(stream);
@@ -102,15 +103,22 @@ namespace XFLocalNotifications
             }
         }
         //push notification 
-        public void PushNotification(string message)
+        public void PushNotification(string note)
         {
             var notification = new NotificationRequest
             {
                 BadgeNumber = 1,
-                Description = "Test description",
-                Title = "Notification",
-                NotificationId = 1337
-                
+                Description = note,
+                Title = "Thông Báo",
+                NotificationId = 1337,
+                Android =
+                {
+                    IconSmallName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("my_icon"),
+                    IconLargeName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("my_icon"),
+                    //AutoCancel = false,
+                    //Ongoing = true
+                }
+
             };
             LocalNotificationCenter.Current.Show(notification);
         }

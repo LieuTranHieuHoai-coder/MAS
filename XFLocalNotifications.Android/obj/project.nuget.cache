@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sj52D5YKQwmIDOCDvLCVp1ZeujoZfPr0fEh4r6k9pdhupYb3lHMMDJt4k8ah9WV8H0f4sp92dosHjINar/sjEQ==",
+  "dgSpecHash": "NgY3yfMWdELpojAzDUpF19sHiLDpbdCmdsaImLZO1xDaTjBWggQYkfnq2TO6jFS4SnIKj9MJw4rUuMqSc06s5g==",
   "success": true,
-  "projectFilePath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
+  "projectFilePath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\MAS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieuhoai\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",
     "C:\\Users\\hieuhoai\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
@@ -90,7 +90,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.3 to 1.6.1. Reference the package directly from the project to select a different version. \r\n XFLocalNotifications.Android -> XFLocalNotifications -> Xamarin.Essentials (>= 1.7.3) \r\n XFLocalNotifications.Android -> Xamarin.Essentials (>= 1.6.1)",
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.3 to 1.6.1. Reference the package directly from the project to select a different version. \r\n MAS -> XFLocalNotifications -> Xamarin.Essentials (>= 1.7.3) \r\n MAS -> Xamarin.Essentials (>= 1.6.1)",
       "libraryId": "Xamarin.Essentials",
       "targetGraphs": [
         "MonoAndroid,Version=v11.0"
@@ -100,7 +100,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2515 to 5.0.0.2012. Reference the package directly from the project to select a different version. \r\n XFLocalNotifications.Android -> XFLocalNotifications -> Xamarin.Forms (>= 5.0.0.2515) \r\n XFLocalNotifications.Android -> Xamarin.Forms (>= 5.0.0.2012)",
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2515 to 5.0.0.2012. Reference the package directly from the project to select a different version. \r\n MAS -> XFLocalNotifications -> Xamarin.Forms (>= 5.0.0.2515) \r\n MAS -> Xamarin.Forms (>= 5.0.0.2012)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "MonoAndroid,Version=v11.0"

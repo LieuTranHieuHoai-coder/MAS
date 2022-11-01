@@ -1988,3 +1988,4 @@ D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\mono\com\goog
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\plugin\LocalNotification\GeofenceTransitionsIntentReceiver.java
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\plugin\LocalNotification\NotificationActionReceiver.java
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\plugin\LocalNotification\ScheduledAlarmReceiver.java
+D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\res\drawable\my_icon.png

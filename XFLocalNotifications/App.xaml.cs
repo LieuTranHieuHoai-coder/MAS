@@ -56,6 +56,7 @@ namespace XFLocalNotifications
                     //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
                     //audio.Load(stream);
                     //audio.Play();
+                    PushNotification(list[list.Count - 1].NameLine + list[list.Count - 1].ButtonName);
                     Global.Global.countItems = list.Count;
                 }
             }
@@ -74,6 +75,7 @@ namespace XFLocalNotifications
                         //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
                         //audio.Load(stream);
                         //audio.Play();
+                        PushNotification(list[list.Count - 1].NameLine + list[list.Count - 1].ButtonName);
                         Global.Global.countItems = list.Count;
                     }
                     else
@@ -101,7 +103,6 @@ namespace XFLocalNotifications
                 Description = note,
                 Title = "Notification",
                 NotificationId = 1337
-
             };
             LocalNotificationCenter.Current.Show(notification);
         }
