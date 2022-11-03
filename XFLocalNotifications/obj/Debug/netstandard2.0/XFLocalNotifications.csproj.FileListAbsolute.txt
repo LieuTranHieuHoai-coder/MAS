@@ -53,3 +53,4 @@ D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\XFLocalNotifications.c
 D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\XFLocalNotifications.dll
 D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\ref\XFLocalNotifications.dll
 D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\XFLocalNotifications.pdb
+D:\Code\MAS\XFLocalNotifications\obj\Debug\netstandard2.0\XFLocalNotifications.csproj.AssemblyReference.cache

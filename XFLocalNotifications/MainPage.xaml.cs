@@ -38,10 +38,28 @@ namespace XFLocalNotifications
              });
         }
 
-        public MainPage(string code)
+        public MainPage(string status)
         {
             InitializeComponent();
+            if (status.Contains("wasUpdate"))
+            {
+                PlaySound();
+                //DisplayAlert("Thông báo", "Xác nhận sửa xong", "OK");
+            }
+            else
+            {
+                //DisplayAlert("Thông báo", "Đã sửa chữa", "OK");
+            }
             ShowMachineAlert();
+            if (Global.Global.globalFactory != null)
+            {
+                FactoryName.Text = Global.Global.factoryName;
+            }
+            Device.StartTimer(new TimeSpan(0, 0, 5), () =>
+            {
+                Device.BeginInvokeOnMainThread(() => ShowMachineAlert());
+                return true;
+            });
         }
         // show data
         public async void ShowMachineAlert()
@@ -53,7 +71,7 @@ namespace XFLocalNotifications
                 if (list == null)
                 {
                     Global.Global.countItems = 0;
-                    Alert.Text = "Hiện không có máy hư, ngồi im xơi nước";
+                    Alert.Text = "Hiện không có máy hư, ngồi im uống nước";
                     MachineList.ItemsSource = list;
                 }
                 else
@@ -128,19 +146,37 @@ namespace XFLocalNotifications
             await Navigation.PushModalAsync(new LoginPage());
         }
         //scan barcode
-        private void ScanButton_Clicked(object sender, EventArgs e)
+        private async void ScanButton_Clicked(object sender, EventArgs e)
         {
-           
-            var scan = new ZXingScannerPage();
-            Navigation.PushModalAsync(scan);
-            scan.OnScanResult += (result) =>
+            if (sender is Frame frame)
             {
-                Device.BeginInvokeOnMainThread(() =>
-               {
-                   Navigation.PushModalAsync(new MainPage(result.Text));
-                   //Global.Global.test = result.Text;
-               });
-            };
+
+                MachineList.SelectedItem = frame.BindingContext;
+                MachineAlert update = new MachineAlert();
+                update = (MachineAlert)MachineList.SelectedItem;
+                var scan = new ZXingScannerPage();
+                await Navigation.PushModalAsync(scan);
+                scan.OnScanResult += (data) =>
+                {
+                    Device.BeginInvokeOnMainThread(async() =>
+                    {
+                        var result = await machineAlertAPI.ScanMachineAlertAsync(data.Text, update.ID_Line, update.ID_Factory);
+                        if (result.Contains("wasUpdate"))
+                        {
+                            App.Current.MainPage = new MainPage(result);
+                        }
+                        else
+                        {
+                            //await DisplayAlert("Thông báo", "Đã sửa chữa", "OK");
+                            //await Navigation.PushModalAsync(new MainPage(result));
+                            App.Current.MainPage = new MainPage(result);
+                        }
+                        
+                        //Global.Global.test = result.Text;
+                    });
+                };
+            }
+            
         }
         // Begin fix time button
         private async void StartButton_Clicked(object sender, EventArgs e)
@@ -181,6 +217,14 @@ namespace XFLocalNotifications
             var stream = assembly.GetManifestResourceStream("XFLocalNotifications.Sounds." + filename);
 
             return stream;
+        }
+
+        public void PlaySound()
+        {
+            var stream = GetStreamFromFile("bell.mp3");
+            var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            audio.Load(stream);
+            audio.Play();
         }
     }
 }

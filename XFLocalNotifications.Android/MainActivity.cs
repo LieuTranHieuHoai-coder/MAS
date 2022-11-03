@@ -72,7 +72,9 @@ namespace XFLocalNotifications.Droid
         private bool IsServiceRunning(System.Type cls)
         {
             ActivityManager manager = (ActivityManager)GetSystemService(Context.ActivityService);
+#pragma warning disable CS0618 // Type or member is obsolete
             foreach (var service in manager.GetRunningServices(int.MaxValue))
+#pragma warning restore CS0618 // Type or member is obsolete
             {
                 if (service.Service.ClassName.Equals(Java.Lang.Class.FromType(cls).CanonicalName))
                 {

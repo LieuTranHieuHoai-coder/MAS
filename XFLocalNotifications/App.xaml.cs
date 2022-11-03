@@ -106,6 +106,7 @@ namespace XFLocalNotifications
             };
             LocalNotificationCenter.Current.Show(notification);
         }
+
     }
     
 }

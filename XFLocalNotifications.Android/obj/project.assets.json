@@ -3723,9 +3723,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\MAS\\XFLocalNotifications.Android\\MAS.csproj",
-      "projectName": "MAS",
-      "projectPath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\MAS.csproj",
+      "projectUniqueName": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
+      "projectName": "XFLocalNotifications.Android",
+      "projectPath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
       "packagesPath": "C:\\Users\\hieuhoai\\.nuget\\packages\\",
       "outputPath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\obj\\",
       "projectStyle": "PackageReference",
@@ -3797,7 +3797,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.3 to 1.6.1. Reference the package directly from the project to select a different version. \r\n MAS -> XFLocalNotifications -> Xamarin.Essentials (>= 1.7.3) \r\n MAS -> Xamarin.Essentials (>= 1.6.1)",
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.3 to 1.6.1. Reference the package directly from the project to select a different version. \r\n XFLocalNotifications.Android -> XFLocalNotifications -> Xamarin.Essentials (>= 1.7.3) \r\n XFLocalNotifications.Android -> Xamarin.Essentials (>= 1.6.1)",
       "libraryId": "Xamarin.Essentials",
       "targetGraphs": [
         "MonoAndroid,Version=v11.0"
@@ -3807,7 +3807,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2515 to 5.0.0.2012. Reference the package directly from the project to select a different version. \r\n MAS -> XFLocalNotifications -> Xamarin.Forms (>= 5.0.0.2515) \r\n MAS -> Xamarin.Forms (>= 5.0.0.2012)",
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2515 to 5.0.0.2012. Reference the package directly from the project to select a different version. \r\n XFLocalNotifications.Android -> XFLocalNotifications -> Xamarin.Forms (>= 5.0.0.2515) \r\n XFLocalNotifications.Android -> Xamarin.Forms (>= 5.0.0.2012)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "MonoAndroid,Version=v11.0"

@@ -1960,9 +1960,6 @@ D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\assets\Xamarin.Go
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\assets\Xamarin.GooglePlayServices.Places.PlaceReport.pdb
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\assets\Xamarin.GooglePlayServices.Tasks.dll
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\assets\Xamarin.GooglePlayServices.Tasks.pdb
-D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\androidx\jl\3ce138ea-8d6c-4be8-8132-4ab6def6ec48.jar
-D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\androidx\proguard\3c7fe5f2-6243-4044-8ef2-458313ba0522.cfg
-D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\androidx\proguard\a3a43411-0c42-4882-b6aa-5b5f8041e675.txt
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\com\google\android\gms\base\R.java
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\com\google\android\gms\common\R.java
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\crc6434af9c19aa01b597\GoogleApiClientConnectionCallbacksImpl.java
@@ -1989,3 +1986,6 @@ D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\plugin\LocalN
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\plugin\LocalNotification\NotificationActionReceiver.java
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\android\src\plugin\LocalNotification\ScheduledAlarmReceiver.java
 D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\res\drawable\my_icon.png
+D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\androidx\jl\34d13858-a6b2-470d-b9d5-045b6c5874f2.jar
+D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\androidx\proguard\6002beb8-599c-40fa-ab11-bda8c7ad061d.txt
+D:\Code\MAS\XFLocalNotifications.Android\obj\Debug\110\androidx\proguard\a38c09cb-a1d9-48af-830c-a5ad7e766915.cfg
