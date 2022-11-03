@@ -43,11 +43,12 @@ namespace XFLocalNotifications
             InitializeComponent();
             if (status.Contains("wasUpdate"))
             {
-                PlaySound();
+                PlaySound("bell.mp3");
                 //DisplayAlert("Thông báo", "Xác nhận sửa xong", "OK");
             }
             else
             {
+                PlaySound("beep.mp3");
                 //DisplayAlert("Thông báo", "Đã sửa chữa", "OK");
             }
             ShowMachineAlert();
@@ -187,17 +188,19 @@ namespace XFLocalNotifications
                 MachineList.SelectedItem = frame.BindingContext;
                 MachineAlert update = new MachineAlert();
                 update = (MachineAlert)MachineList.SelectedItem;
-                if (update.BeginFixTime == "" || update.BeginFixTime == null)
-                {
-                    _ = await machineAlertAPI.UpdateMachineAlertAsync(update.ID_Button, update.ID_Line, update.ID_Factory);
-                    ShowMachineAlert();
+                _ = await machineAlertAPI.UpdateMachineAlertAsync(update.ID_Button, update.ID_Line, update.ID_Factory);
+                ShowMachineAlert();
+                //if (update.BeginFixTime == "" || update.BeginFixTime == null)
+                //{
+                //    _ = await machineAlertAPI.UpdateMachineAlertAsync(update.ID_Button, update.ID_Line, update.ID_Factory);
+                //    ShowMachineAlert();
                     
-                }
-                else
-                {
-                    await DisplayAlert("Thông báo", "Thời gian đã được đặt", "OK");
-                    ShowMachineAlert();
-                }
+                //}
+                //else
+                //{
+                //    await DisplayAlert("Thông báo", "Thời gian đã được đặt", "OK");
+                //    ShowMachineAlert();
+                //}
                 
             }
            
@@ -219,9 +222,9 @@ namespace XFLocalNotifications
             return stream;
         }
 
-        public void PlaySound()
+        public void PlaySound(string soundName)
         {
-            var stream = GetStreamFromFile("bell.mp3");
+            var stream = GetStreamFromFile(soundName);
             var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             audio.Load(stream);
             audio.Play();

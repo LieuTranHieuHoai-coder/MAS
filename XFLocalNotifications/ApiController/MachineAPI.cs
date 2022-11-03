@@ -81,6 +81,7 @@ namespace XFLocalNotifications.ApiController
                 List<MachineAlert> data = new List<MachineAlert>();
                 var client = new HttpClient();
                 HttpResponseMessage response = await client.GetAsync(Global.Global.apiURL + "completeFix&ID_Button=" + idButton + "&ID_Line=" + idLine + "&ID_Factory=" + idFactory);
+                _ = await client.GetAsync(Global.Global.apiURL + "updateTime&ID_ButtonTime=" + idButton + "&ID_Line=" + idLine + "&ID_Factory=" + idFactory);
 
                 string result = await response.Content.ReadAsStringAsync();
 
