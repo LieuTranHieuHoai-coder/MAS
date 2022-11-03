@@ -92,7 +92,7 @@ namespace XFLocalNotifications
         {
             var notification = new NotificationRequest
             {
-                BadgeNumber = 1,
+                //1BadgeNumber = 1,
                 Description = note,
                 Title = "Thông Báo",
                 NotificationId = 1337,
