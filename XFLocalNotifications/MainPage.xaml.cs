@@ -134,7 +134,7 @@ namespace XFLocalNotifications
                 {
                     IconSmallName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("my_icon"),
                     IconLargeName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("my_icon"),
-                    //AutoCancel = false,
+                    AutoCancel = true,
                     //Ongoing = true
                 }
 

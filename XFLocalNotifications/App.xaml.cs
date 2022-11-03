@@ -52,11 +52,8 @@ namespace XFLocalNotifications
                 }
                 else
                 {
-                    //var stream = GetStreamFromFile("bell.mp3");
-                    //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-                    //audio.Load(stream);
-                    //audio.Play();
-                    PushNotification(list[list.Count - 1].NameLine + list[list.Count - 1].ButtonName);
+                   
+                    PushNotification(list[list.Count - 1].NameLine + " " + list[list.Count - 1].ButtonName);
                     Global.Global.countItems = list.Count;
                 }
             }
@@ -71,11 +68,7 @@ namespace XFLocalNotifications
                 {
                     if (list.Count > Global.Global.countItems)
                     {
-                        //var stream = GetStreamFromFile("bell.mp3");
-                        //var audio = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-                        //audio.Load(stream);
-                        //audio.Play();
-                        PushNotification(list[list.Count - 1].NameLine + list[list.Count - 1].ButtonName);
+                        PushNotification(list[list.Count - 1].NameLine +" "+ list[list.Count - 1].ButtonName);
                         Global.Global.countItems = list.Count;
                     }
                     else
@@ -101,8 +94,16 @@ namespace XFLocalNotifications
             {
                 BadgeNumber = 1,
                 Description = note,
-                Title = "Notification",
-                NotificationId = 1337
+                Title = "Thông Báo",
+                NotificationId = 1337,
+                Android =
+                {
+                    IconSmallName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("my_icon"),
+                    IconLargeName = new Plugin.LocalNotification.AndroidOption.AndroidIcon("my_icon"),
+                    AutoCancel = true,
+                    //Ongoing = true
+                }
+
             };
             LocalNotificationCenter.Current.Show(notification);
         }
