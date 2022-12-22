@@ -3723,11 +3723,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
+      "projectUniqueName": "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
       "projectName": "XFLocalNotifications.Android",
-      "projectPath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
+      "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
       "packagesPath": "C:\\Users\\hieuhoai\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\obj\\",
+      "outputPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3750,8 +3750,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj": {
-              "projectPath": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj"
+            "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj": {
+              "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj"
             }
           }
         }

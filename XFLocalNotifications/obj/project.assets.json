@@ -1327,11 +1327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
+      "projectUniqueName": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
       "projectName": "XFLocalNotifications",
-      "projectPath": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
+      "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
       "packagesPath": "C:\\Users\\hieuhoai\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\MAS\\XFLocalNotifications\\obj\\",
+      "outputPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

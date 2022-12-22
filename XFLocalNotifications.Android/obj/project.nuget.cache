@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sj52D5YKQwmIDOCDvLCVp1ZeujoZfPr0fEh4r6k9pdhupYb3lHMMDJt4k8ah9WV8H0f4sp92dosHjINar/sjEQ==",
+  "dgSpecHash": "2JexNvCsFfRpEKGJTWWLt8oFnwZLinl+PDw7feO98S9mF6vFSsX+ACxStBEBozOVU+4vzP9oAdd97f37JjAAAA==",
   "success": true,
-  "projectFilePath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
+  "projectFilePath": "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieuhoai\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",
     "C:\\Users\\hieuhoai\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",

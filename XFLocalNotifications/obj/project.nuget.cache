@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BOgmIFmi936fb+YFtRLE2wwsenfnWXj/wM0tj8t20V5bmZ2LBxCVuWsFZdTqK1UY62dCbzLYszNTicgiQTrwbg==",
+  "dgSpecHash": "9svLTy3nP9LfJquELfHUUUvd8o+jRAOe0pWalwYdMcO7OT6YqscGUoHqrgNhYoXoJ6nwag4wm2jCHeXEEAHRgw==",
   "success": true,
-  "projectFilePath": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
+  "projectFilePath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieuhoai\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\hieuhoai\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj": {}
+    "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj": {}
   },
   "projects": {
-    "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj": {
+    "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
+        "projectUniqueName": "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
         "projectName": "XFLocalNotifications.Android",
-        "projectPath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
+        "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\XFLocalNotifications.Android.csproj",
         "packagesPath": "C:\\Users\\hieuhoai\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\MAS\\XFLocalNotifications.Android\\obj\\",
+        "outputPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj": {
-                "projectPath": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj"
+              "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj": {
+                "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj": {
+    "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
+        "projectUniqueName": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
         "projectName": "XFLocalNotifications",
-        "projectPath": "D:\\Code\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
+        "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
         "packagesPath": "C:\\Users\\hieuhoai\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\MAS\\XFLocalNotifications\\obj\\",
+        "outputPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
