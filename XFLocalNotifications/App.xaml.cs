@@ -28,7 +28,7 @@ namespace XFLocalNotifications
         public MachineAPI machineAlertAPI = new MachineAPI();
         protected override void OnSleep()
         {
-            Device.StartTimer(new TimeSpan(0, 0, 5), () =>
+            Device.StartTimer(new TimeSpan(0, 0, 30), () =>
             {
                 Device.BeginInvokeOnMainThread(() => ShowMachineAlert());
                 return true;

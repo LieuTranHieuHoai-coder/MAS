@@ -75,7 +75,7 @@
                                                 </StackLayout>
                                                 <StackLayout Orientation="Horizontal" VerticalOptions="End" HeightRequest="30">
                                                     <Label Text="Thời gian bắt đầu: " TextColor="Black"></Label>
-                                                    <Label Text="{Binding BeginFixTime}" TextColor="Black"></Label>
+                                                    <Label Text="{Binding BeginFixTime}" FontAttributes="Bold" FontSize="14" TextColor="Green"></Label>
                                                 </StackLayout>
                                             </StackLayout>
 
@@ -89,68 +89,6 @@
 
                 </ListView>
             </RefreshView>
-            
-
-            <!--<Button Grid.Column="2" 
-                                        FontFamily="MaterialIconsRegular" 
-                                        x:Name="detail"
-                                        HorizontalOptions="Center" 
-                                        BackgroundColor="Cyan" 
-                                        TextColor="White" 
-                                        FontSize="20" 
-                                        Text="&#xe88e;" 
-                                        Margin="3"
-                                        
-                                        >
-                    </Button>-->
-            <!--<Button Grid.Column="3" 
-                                        FontFamily="MaterialIconsRegular" 
-                                        HorizontalOptions="Center" 
-                                        BackgroundColor="LightGray" 
-                                        TextColor="Black" 
-                                        Text="&#xf206;"
-                                        x:Name="ScanButton" 
-                                        Clicked="ScanButton_Clicked"
-                                        Margin="3"></Button>-->
-
-            <!--<StackLayout VerticalOptions="Center">
-                <Button VerticalOptions="CenterAndExpand"
-                Text="Start Service"
-                Command="{Binding StartCommand}"
-                IsEnabled="{Binding StartEnabled}"/>
-
-                <Button VerticalOptions="CenterAndExpand"
-                Text="Stop Service"
-                Command="{Binding EndCommand}"
-                IsEnabled="{Binding StopEnabled}"/>
-
-                <Label Text="Coordinates" VerticalOptions="CenterAndExpand" FontSize="Title"/>
-
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Latitude: "/>
-                                <Span Text="{Binding Latitude}"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Longitude: "/>
-                                <Span Text="{Binding Longitude}"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-
-                <Label Text="{Binding UserMessage}" VerticalOptions="CenterAndExpand"/>
-
-            </StackLayout>-->
-
 
         </StackLayout>
     </StackLayout>
