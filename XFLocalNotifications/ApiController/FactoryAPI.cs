@@ -22,10 +22,10 @@ namespace XFLocalNotifications.ApiController
             
             if (response.IsSuccessStatusCode)
             {
-                data = JsonConvert.DeserializeObject<List<Factory>>(result);
+                data = JsonConvert.DeserializeObject<List<Factory>>(result);              
             }
-            
             return data;
         }
+
     }
 }

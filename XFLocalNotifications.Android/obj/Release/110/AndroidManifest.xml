@@ -7,11 +7,11 @@
     -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="nl.versluis.xflocalnotifications" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WAKE_LOCK" />
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
   <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -20,7 +20,7 @@
   <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-  <application android:label="XFLocalNotifications.Android" android:theme="@style/MainTheme" android:usesCleartextTraffic="true" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/mas1_copy" android:extractNativeLibs="true">
+  <application android:label="XFLocalNotifications.Android" android:theme="@style/MainTheme" android:usesCleartextTraffic="true" android:name="android.app.Application" android:allowBackup="true" android:extractNativeLibs="true">
     <receiver android:name="com.locationservice.app.BootBroadcastReceiver" android:enabled="true" android:exported="true" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
       <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -29,13 +29,6 @@
       </intent-filter>
     </receiver>
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
-    <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@drawable/mas1_copy" android:label="MAS" android:theme="@style/MainTheme" android:name="crc647abab4ecb1da5ceb.MainActivity" android:exported="true">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
-    <service android:name="crc64b408c9d48c77d79e.AndroidLocationService" />
     <receiver android:enabled="true" android:exported="false" android:label="Plugin LocalNotification Geofence Transitions Receiver" android:name="plugin.LocalNotification.GeofenceTransitionsIntentReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Plugin LocalNotification Action Receiver" android:name="plugin.LocalNotification.NotificationActionReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Plugin LocalNotification Scheduled Alarm Receiver" android:name="plugin.LocalNotification.ScheduledAlarmReceiver">
@@ -49,6 +42,13 @@
     </receiver>
     <receiver android:enabled="true" android:exported="false" android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" />
     <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="Scanner" android:name="crc6480997b3ef81bf9b2.ZxingActivity" />
+    <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@drawable/mas1_copy" android:label="MAS" android:theme="@style/MainTheme" android:name="crc647abab4ecb1da5ceb.MainActivity" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name="crc64b408c9d48c77d79e.AndroidLocationService" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="nl.versluis.xflocalnotifications.mono.MonoRuntimeProvider.__mono_init__" />
   </application>
 </manifest>

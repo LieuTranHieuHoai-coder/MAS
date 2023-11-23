@@ -155,26 +155,7 @@ namespace XFLocalNotifications
                 MachineList.SelectedItem = frame.BindingContext;
                 MachineAlert update = new MachineAlert();
                 update = (MachineAlert)MachineList.SelectedItem;
-                //var scan = new ZXingScannerPage();
-                //await Navigation.PushModalAsync(scan);
-                //scan.OnScanResult += (data) =>
-                //{
-                //    Device.BeginInvokeOnMainThread(async() =>
-                //    {
-                //        var result = await machineAlertAPI.ScanMachineAlertAsync(data.Text, update.ID_Line, update.ID_Factory);
-                //        if (result.Contains("wasUpdate"))
-                //        {
-                //            App.Current.MainPage = new MainPage(result);
-                //        }
-                //        else
-                //        {
-                //            //await DisplayAlert("Thông báo", "Đã sửa chữa", "OK");
-                //            //await Navigation.PushModalAsync(new MainPage(result));
-                //            App.Current.MainPage = new MainPage(result);
-                //        }
-
-                //    });
-                //};
+                
                 var action = await DisplayAlert("Thông báo", "Nhấn Yes để xác nhận máy sửa xong.", "Yes", "No");
                 if (action)
                 {

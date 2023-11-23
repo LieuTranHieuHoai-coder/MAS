@@ -27,7 +27,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.VersionedParcelable.dll",
 		"Xamarin.AndroidX.ViewPager.dll",
 		"Xamarin.Google.Android.Material.dll",
-		"XFLocalNotifications.Android.dll",
 		"FastAndroidCamera.dll",
 		"FormsViewGroup.dll",
 		"Microsoft.Extensions.DependencyInjection.Abstractions.dll",
@@ -53,12 +52,13 @@ public class MonoPackageManager_Resources {
 		"Xamarin.GooglePlayServices.Basement.dll",
 		"Xamarin.GooglePlayServices.Location.dll",
 		"Xamarin.GooglePlayServices.Tasks.dll",
-		"XFLocalNotifications.dll",
 		"ZXing.Net.Mobile.Core.dll",
 		"ZXing.Net.Mobile.Forms.Android.dll",
 		"ZXing.Net.Mobile.Forms.dll",
 		"zxing.portable.dll",
 		"ZXingNetMobile.dll",
+		"XFLocalNotifications.Android.dll",
+		"XFLocalNotifications.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

@@ -10,7 +10,7 @@
         "projectUniqueName": "D:\\Code\\Git\\MAS\\XFLocalNotifications.iOS\\XFLocalNotifications.iOS.csproj",
         "projectName": "XFLocalNotifications.iOS",
         "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications.iOS\\XFLocalNotifications.iOS.csproj",
-        "packagesPath": "C:\\Users\\hieuhoai\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\lieuhoai\\.nuget\\packages\\",
         "outputPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\hieuhoai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lieuhoai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -89,7 +89,7 @@
         "projectUniqueName": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
         "projectName": "XFLocalNotifications",
         "projectPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\XFLocalNotifications.csproj",
-        "packagesPath": "C:\\Users\\hieuhoai\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\lieuhoai\\.nuget\\packages\\",
         "outputPath": "D:\\Code\\Git\\MAS\\XFLocalNotifications\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -97,7 +97,7 @@
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\hieuhoai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lieuhoai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
